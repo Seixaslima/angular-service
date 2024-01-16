@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from "environments/environment";
 
@@ -5,15 +6,15 @@ import { environment } from "environments/environment";
   providedIn: 'root'
 })
 export class PokemonService {
-
   baseURL:string = ''
+  pokeData:any
 
-  constructor() {
+  constructor(private http:HttpClient) {
     this.baseURL = environment.pokeApi
   }
 
   getPokemon(name:string) {
-    console.log(this.baseURL)
-    console.log(environment)
+    this.pokeData = this.http.get(`${this.baseURL}${name}`)
+    console.log(this.pokeData)
   }
 }
