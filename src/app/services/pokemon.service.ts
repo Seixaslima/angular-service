@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
+import { environment } from "environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  constructor() { }
+  baseURL:string = ''
+
+  constructor() {
+    this.baseURL = environment.pokeApi
+  }
 
   getPokemon(name:string) {
-    console.log(name)
+    console.log(this.baseURL)
+    console.log(environment)
   }
 }
