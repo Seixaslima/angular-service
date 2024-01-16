@@ -16,14 +16,23 @@
 .card__title > h3 {
   color: white;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .card__body {
   background-color: #616161;
+  border-radius: 15px;
   width: 90%;
   margin-inline: auto;
   margin-top: 10px;
   height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__body > img {
+  width: 95%;
 }
 
 .card__stats {

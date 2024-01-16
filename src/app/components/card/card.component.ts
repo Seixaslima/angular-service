@@ -23,11 +23,7 @@ export class CardComponent implements OnInit {
       id:0,
       name:"",
       sprites:{
-        other: {
-          home: {
-            front_default: ""
-          }
-        }
+        front_default: ""
       },
       types:[{
         slot:1,
